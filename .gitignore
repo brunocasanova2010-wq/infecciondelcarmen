@@ -1,0 +1,16 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporales de Illustrator / editores
+*.tmp
+*~
+*.ai.lock
+Adobe Illustrator */
+
+# Node / build (por si luego se usa en la WebApp)
+node_modules/
+dist/
+build/
+.env
