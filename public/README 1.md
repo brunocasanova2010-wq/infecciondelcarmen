@@ -35,4 +35,5 @@ docs/
 - **C – Huida Desesperada:** Salud < 25 (y > 0) o Moral ≤ 10.
 
 ## Estado
-Sprint 2 — preproducción y estructura. Ver `GUIA_GITHUB.md` para cómo sube su parte cada integrante.
+Sprint 2 — preproducción y estructura.
+
