@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROTOTIPO - Infeccion: Escape del Carmen (Sprint 3)</title>
+  <link rel="stylesheet" href="css/prototipo.css">
+</head>
+<body>
+  <div id="juego">
+
+    <!-- ============ INICIO ============ -->
+    <section id="pantalla-inicio" class="pantalla activa">
+      <h1>Infeccion:<br>Escape del Carmen</h1>
+      <p class="sub">Prototipo navegable. Guia a Mateo por el colegio: cada
+        decision cambia la Salud, la Moral y los Recursos del grupo, y define
+        el final.</p>
+      <button id="btn-empezar" class="btn-primario">Probar el prototipo</button>
+      <p class="nota">[Version de prueba del Sprint 3. El arte son los archivos .ai
+        del equipo exportados a SVG (vectores editables). Faltan sonido y pulido.]</p>
+    </section>
+
+    <!-- ============ JUEGO ============ -->
+    <section id="pantalla-juego" class="pantalla">
+      <span id="capa-fondo-nota">fondo: SVG exportado del .ai</span>
+      <span id="etiqueta-etapa">Etapa</span>
+
+      <div id="hud">
+        <div class="titulo-hud">ESTADO DEL GRUPO</div>
+        <div class="fila"><span>Salud</span><span id="valor-salud">100%</span></div>
+        <div class="barra"><span id="barra-salud" style="width:100%"></span></div>
+        <div class="fila"><span>Moral</span><span id="valor-moral">50</span></div>
+        <div class="barra"><span id="barra-moral" style="width:50%"></span></div>
+        <div class="fila"><span>Recursos</span><span id="valor-recursos">1 / 5</span></div>
+        <div class="fila"><span>Llaves camioneta</span><span id="valor-llaves">No</span></div>
+      </div>
+
+      <div id="aviso" class="oculto"></div>
+      <img id="retrato" src="" alt="personaje (SVG del .ai)">
+
+      <div id="panel-narrativo">
+        <p id="texto-escena"></p>
+        <div id="opciones"></div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL ============ -->
+    <section id="pantalla-final" class="pantalla">
+      <h2 id="titulo-final"></h2>
+      <p id="cuerpo-final"></p>
+      <p id="resumen-final"></p>
+      <button id="btn-reiniciar-final" class="btn-primario">Volver al inicio</button>
+    </section>
+
+    <!-- ============ GAME OVER ============ -->
+    <section id="pantalla-gameover" class="pantalla">
+      <h2 id="titulo-gameover"></h2>
+      <p id="cuerpo-gameover"></p>
+      <button id="btn-reiniciar-go" class="btn-primario">Reiniciar</button>
+    </section>
+
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/variables.js"></script>
+  <script src="js/finales.js"></script>
+  <script src="js/juego.js"></script>
+</body>
+</html>
