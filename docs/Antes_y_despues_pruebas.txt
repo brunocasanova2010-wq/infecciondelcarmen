@@ -1,0 +1,24 @@
+PRUEBAS DEL SPRINT 4 - ANTES vs DESPUES
+Archivo: tools/prueba_reglas.js  |  Comando: node tools/prueba_reglas.js
+
+========== ANTES (codigo del Sprint 3, restaurado con tools/baseline.js) ==========
+[FALLA] P1 - Llaves obligatorias para el Final A  ->  sin llaves = A ; con llaves = A
+[FALLA] P2 - El codigo coincide con el comentario  ->  A con salud 45 = A (esperaba C) | A con moral 35 = A (esperaba C) | A con 1 recurso = B (esperaba C) | A completo = A
+[FALLA] P3 - Refugiarse bien no es "Huida Desesperada"  ->  refugio = C ; huida a pie = C
+[FALLA] P4 - Penalizacion de Moral 0 una sola vez  ->  salud = 80 y despues = 40
+[FALLA] P5 - La opcion bloqueada no se puede elegir  ->  disponible = false ; destino = null ; salud = 100 ; recursos = 0 ; boton disabled = false
+[OK]    P6 - Ningun camino queda colgado  ->  696 desenlaces -> A=140 B=88 C=452 GO=16
+[FALLA] P7 - Ningun camino llega al Final A sin llaves  ->  98 caminos
+
+1 pruebas OK, 6 fallaron (de 7)
+
+========== DESPUES (Sprint 4 corregido) ==========
+[OK]    P1 - Llaves obligatorias para el Final A  ->  sin llaves = C ; con llaves = A
+[OK]    P2 - El codigo coincide con el comentario  ->  A con salud 45 = C | A con moral 35 = C | A con 1 recurso = C | A completo = A
+[OK]    P3 - Refugiarse bien no es "Huida Desesperada"  ->  refugio = B ; huida a pie = C
+[OK]    P4 - Penalizacion de Moral 0 una sola vez  ->  salud = 80 y despues = 80
+[OK]    P5 - La opcion bloqueada no se puede elegir  ->  disponible = false ; destino = null ; salud = 100 ; recursos = 0 ; boton disabled = true
+[OK]    P6 - Ningun camino queda colgado  ->  696 desenlaces -> A=28 B=284 C=368 GO=16
+[OK]    P7 - Ningun camino llega al Final A sin llaves  ->  0 caminos
+
+7 pruebas OK, 0 fallaron (de 7)
