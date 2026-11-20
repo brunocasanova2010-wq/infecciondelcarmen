@@ -1,0 +1,9 @@
+[FALLA] P1 - Llaves obligatorias para el Final A  ->  sin llaves = A ; con llaves = A
+[FALLA] P2 - El codigo coincide con el comentario  ->  A con salud 45 (no alcanza 50) = A (ERROR: esperaba C) | A con moral 35 (no alcanza 40) = A (ERROR: esperaba C) | A con 1 recurso (no alcanza 2) = B (ERROR: esperaba C) | A completo (justo en el limite) = A
+[FALLA] P3 - Refugiarse bien no es "Huida Desesperada"  ->  refugio = C ; huida a pie = C
+[FALLA] P4 - Penalizacion de Moral 0 una sola vez  ->  salud = 80 y despues = 40
+[FALLA] P5 - La opcion bloqueada no se puede elegir  ->  disponible = false ; destino = null ; salud = 100 ; recursos = 0 ; boton disabled = false
+[OK]    P6 - Ningun camino queda colgado (siempre hay desenlace)  ->  696 desenlaces -> A=140 B=88 C=452 GO=16
+[FALLA] P7 - Ningun camino llega al Final A sin llaves  ->  98 caminos
+
+1 pruebas OK, 6 fallaron (de 7)
