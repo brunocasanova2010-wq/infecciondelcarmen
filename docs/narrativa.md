@@ -139,3 +139,4 @@ fin del recorrido.
 3. **No hay héroes invencibles.** El final C existe y es el más probable si el
    jugador improvisa.
 4. **El texto es corto a propósito.** Se lee en pantalla, no en un libro.
+
