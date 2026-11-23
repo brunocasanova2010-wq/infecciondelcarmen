@@ -13,26 +13,26 @@
    ============================================================ */
 
 const RUTAS = {
-  fondos: 'assets/fondos/',
-  personajes: 'assets/personajes/'
+  fondos: 'assets/fondos/',          // webapp/assets/fondos/
+  personajes: 'assets/personajes/',  // webapp/assets/personajes/
+  animacion: 'assets/animacion/'     // webapp/assets/animacion/
 };
 
-/* Estado inicial del juego (lo consume variables.js) */
-const ESTADO_INICIAL = {
-  salud: 100,      // 0 - 100  (0 = GAME OVER independiente)
-  moral: 50,       // 0 - 100
-  recursos: 1,     // 0 - 5 (arrancan con 1: una herramienta basica)
-  llaves: false,       // llaves de la camioneta (Etapa 3)
-  tomasRescatado: false, // consecuencia narrativa (Etapa 4)
-  radioReparada: false,  // consecuencia narrativa (Etapa 5)
-  salieronCamioneta: false // como escapan (Etapa 6) -> decide el final A o C
-};
+/* EL ESTADO INICIAL NO SE DEFINE ACA.
+   Vive en tools/reglas.js (REGLAS.inicial) y es el mismo archivo que
+   carga la web como webapp/js/reglas.js. Un solo lugar, un solo valor:
+   asi el codigo y la documentacion no pueden contradecirse.
+   Arrancan con 1 recurso (una herramienta basica) y la explicacion del
+   porque esta en docs/balance_sprint4.md. */
 
 /* Cada escena:
    id, etapa, fondo, personaje, titulo, texto, opciones[]
    Cada opcion:
-     texto, efectos{salud,moral,recursos}, set{...}, requiere{recursos},
-     bloqueadaTexto, efectosAlternativos{...}, destino
+     texto, efectos{salud,moral,recursos}, set{...}, requiere{recursos}, destino
+
+   REGLA DE ORO (Sprint 4): si la opcion pide recursos y no alcanzan,
+   el boton queda DESHABILITADO. No avanza, no aplica otra cosa y dice
+   en pantalla "Te faltan recursos". Nunca hay un camino escondido.
 */
 const ESCENAS = {
 
@@ -66,7 +66,7 @@ const ESCENAS = {
     opciones: [
       { texto: 'Avanzar a paso acelerado', efectos:{salud:-25, moral:+10}, destino:'N3A' },
       { texto: 'Avanzar en sigilo tras el mostrador', efectos:{salud:-5}, destino:'N3B' },
-      { texto: 'Usar una bengala para abrir paso', requiere:{recursos:1}, efectos:{recursos:-1, salud:+10}, bloqueadaTexto:'No tenes bengalas (Recursos insuficientes).', efectosAlternativos:{moral:-10}, destino:'N3C' }
+      { texto: 'Usar una bengala para abrir paso', requiere:{recursos:1}, efectos:{recursos:-1, salud:+10}, destino:'N3C' }
     ]
   },
   N2C: {
@@ -118,7 +118,7 @@ const ESCENAS = {
     titulo: 'Etapa 4 - Laboratorio: Tomas atrapado',
     texto: 'Tomas quedo encerrado en el laboratorio, golpeando el vidrio. \"No lo dejamos. Nadie se queda atras\", dice Mateo. La puerta principal esta trabada.',
     opciones: [
-      { texto: 'Rescatar a Tomas con una herramienta', requiere:{recursos:1}, efectos:{recursos:-1, moral:+25, salud:-5}, set:{tomasRescatado:true}, bloqueadaTexto:'Necesitas una herramienta/recurso para forzar la puerta.', efectosAlternativos:{}, destino:'N5A' },
+      { texto: 'Rescatar a Tomas con una herramienta', requiere:{recursos:1}, efectos:{recursos:-1, moral:+25, salud:-5}, set:{tomasRescatado:true}, destino:'N5A' },
       { texto: 'Forzar la traba a mano entre todos', efectos:{salud:-20, moral:+15}, set:{tomasRescatado:true}, destino:'N5B' },
       { texto: 'Abandonar a Tomas y avanzar', efectos:{moral:-25}, set:{tomasRescatado:false}, destino:'N5C' }
     ]
@@ -128,7 +128,7 @@ const ESCENAS = {
     titulo: 'Etapa 4 - Laboratorio: Ventanal lateral',
     texto: 'Desde el ventanal lateral ves a Tomas atrapado. Hay que decidir rapido.',
     opciones: [
-      { texto: 'Romper el vidrio con una herramienta', requiere:{recursos:1}, efectos:{recursos:-1, moral:+20, salud:-10}, set:{tomasRescatado:true}, bloqueadaTexto:'Sin herramienta no podes romper el ventanal con seguridad.', efectosAlternativos:{}, destino:'N5A' },
+      { texto: 'Romper el vidrio con una herramienta', requiere:{recursos:1}, efectos:{recursos:-1, moral:+20, salud:-10}, set:{tomasRescatado:true}, destino:'N5A' },
       { texto: 'Golpear la estructura y abrir la traba', efectos:{salud:-15, moral:+10}, set:{tomasRescatado:true}, destino:'N5B' },
       { texto: 'Seguir de largo sin Tomas', efectos:{salud:+5, moral:-20}, set:{tomasRescatado:false}, destino:'N5C' }
     ]
@@ -138,7 +138,7 @@ const ESCENAS = {
     titulo: 'Etapa 4 - Laboratorio: Conducto tecnico',
     texto: 'El conducto tecnico llega hasta la reja donde esta Tomas, pero el techo cruje.',
     opciones: [
-      { texto: 'Cortar la reja con una herramienta', requiere:{recursos:1}, efectos:{recursos:-1, moral:+30}, set:{tomasRescatado:true}, bloqueadaTexto:'Sin herramienta no podes cortar la reja.', efectosAlternativos:{}, destino:'N5A' },
+      { texto: 'Cortar la reja con una herramienta', requiere:{recursos:1}, efectos:{recursos:-1, moral:+30}, set:{tomasRescatado:true}, destino:'N5A' },
       { texto: 'Tirar de la reja entre todos', efectos:{salud:-25, moral:+15}, set:{tomasRescatado:true}, destino:'N5B' },
       { texto: 'Abandonar por riesgo de derrumbe', efectos:{moral:-30}, set:{tomasRescatado:false}, destino:'N5C' }
     ]
@@ -150,8 +150,8 @@ const ESCENAS = {
     titulo: 'Etapa 5 - Gimnasio: Salida del taller',
     texto: 'El gimnasio es el ultimo filtro. En un rincon hay una radio de emergencia rota. \"Si la arreglamos, alguien puede escucharnos\", dice Lucas.',
     opciones: [
-      { texto: 'Activar la alarma del taller para distraer', requiere:{recursos:1}, efectos:{recursos:-1, moral:-10, salud:+15}, bloqueadaTexto:'No tenes recurso para activar la alarma.', efectosAlternativos:{salud:-10}, destino:'N6A' },
-      { texto: 'Reparar la radio de emergencia', requiere:{recursos:1}, efectos:{salud:-5, moral:+15}, set:{radioReparada:true}, bloqueadaTexto:'Sin recurso/herramienta no podes reparar la radio.', efectosAlternativos:{moral:-5}, destino:'N6B' },
+      { texto: 'Activar la alarma del taller para distraer', requiere:{recursos:1}, efectos:{recursos:-1, moral:-10, salud:+15}, destino:'N6A' },
+      { texto: 'Reparar la radio de emergencia', requiere:{recursos:1}, efectos:{salud:-5, moral:+15}, set:{radioReparada:true}, destino:'N6B' },
       { texto: 'Escalar al techo y evitar la horda', efectos:{salud:-10, moral:+10}, destino:'N6C' }
     ]
   },
@@ -160,8 +160,8 @@ const ESCENAS = {
     titulo: 'Etapa 5 - Gimnasio: Puerta central',
     texto: 'La puerta central da al estacionamiento, pero esta llena de infectados. Sobre una mesa hay una radio rota.',
     opciones: [
-      { texto: 'Hacer sonar la sirena del tablero', requiere:{recursos:1}, efectos:{recursos:-1, moral:-15, salud:+20}, bloqueadaTexto:'No tenes recurso para la sirena.', efectosAlternativos:{salud:-15}, destino:'N6A' },
-      { texto: 'Reparar la radio y pedir ayuda', requiere:{recursos:1}, efectos:{salud:-5, moral:+15}, set:{radioReparada:true}, bloqueadaTexto:'Sin recurso no podes reparar la radio.', efectosAlternativos:{moral:-5}, destino:'N6B' },
+      { texto: 'Hacer sonar la sirena del tablero', requiere:{recursos:1}, efectos:{recursos:-1, moral:-15, salud:+20}, destino:'N6A' },
+      { texto: 'Reparar la radio y pedir ayuda', requiere:{recursos:1}, efectos:{salud:-5, moral:+15}, set:{radioReparada:true}, destino:'N6B' },
       { texto: 'Saltar el muro desde las gradas', efectos:{salud:-15, moral:+15}, destino:'N6C' }
     ]
   },
@@ -170,8 +170,8 @@ const ESCENAS = {
     titulo: 'Etapa 5 - Gimnasio: Pasillo de viento',
     texto: 'El pasillo de viento es estrecho y peligroso. Sofia encuentra una radio de emergencia bajo los bancos.',
     opciones: [
-      { texto: 'Lanzar un bote de humo', requiere:{recursos:1}, efectos:{recursos:-1, moral:-5, salud:+10}, bloqueadaTexto:'No tenes recurso para el humo.', efectosAlternativos:{salud:-10}, destino:'N6A' },
-      { texto: 'Reparar la radio antes de salir', requiere:{recursos:1}, efectos:{salud:-5, moral:+15}, set:{radioReparada:true}, bloqueadaTexto:'Sin recurso no podes reparar la radio.', efectosAlternativos:{moral:-5}, destino:'N6B' },
+      { texto: 'Lanzar un bote de humo', requiere:{recursos:1}, efectos:{recursos:-1, moral:-5, salud:+10}, destino:'N6A' },
+      { texto: 'Reparar la radio antes de salir', requiere:{recursos:1}, efectos:{salud:-5, moral:+15}, set:{radioReparada:true}, destino:'N6B' },
       { texto: 'Cruzar por el conducto de ventilacion', efectos:{salud:-10, moral:+5}, destino:'N6C' }
     ]
   },
@@ -184,7 +184,7 @@ const ESCENAS = {
     opciones: [
       { texto: 'Escapar en la camioneta', efectos:{moral:+10}, set:{salieronCamioneta:true}, destino:'FINAL' },
       { texto: 'Huir a pie a Plaza San Martin', efectos:{salud:-25, moral:+5, recursos:-1}, set:{salieronCamioneta:false}, destino:'FINAL' },
-      { texto: 'Refugiarse en la estacion de servicio', requiere:{recursos:1}, efectos:{recursos:-1, moral:+5}, set:{salieronCamioneta:false}, bloqueadaTexto:'Sin recurso el refugio es mas costoso.', efectosAlternativos:{moral:-10}, destino:'FINAL' }
+      { texto: 'Refugiarse en la estacion de servicio', requiere:{recursos:1}, efectos:{recursos:-1, moral:+5}, set:{salieronCamioneta:false}, destino:'FINAL' }
     ]
   },
   N6B: {
@@ -194,7 +194,7 @@ const ESCENAS = {
     opciones: [
       { texto: 'Escapar en la camioneta', efectos:{moral:+10}, set:{salieronCamioneta:true}, destino:'FINAL' },
       { texto: 'Huir a pie a Plaza San Martin', efectos:{salud:-25, moral:+5, recursos:-1}, set:{salieronCamioneta:false}, destino:'FINAL' },
-      { texto: 'Refugiarse en la estacion de servicio', requiere:{recursos:1}, efectos:{recursos:-1, moral:+5}, set:{salieronCamioneta:false}, bloqueadaTexto:'Sin recurso el refugio es mas costoso.', efectosAlternativos:{moral:-10}, destino:'FINAL' }
+      { texto: 'Refugiarse en la estacion de servicio', requiere:{recursos:1}, efectos:{recursos:-1, moral:+5}, set:{salieronCamioneta:false}, destino:'FINAL' }
     ]
   },
   N6C: {
@@ -204,7 +204,7 @@ const ESCENAS = {
     opciones: [
       { texto: 'Escapar en la camioneta', efectos:{moral:+10}, set:{salieronCamioneta:true}, destino:'FINAL' },
       { texto: 'Huir a pie a Plaza San Martin', efectos:{salud:-25, moral:+5, recursos:-1}, set:{salieronCamioneta:false}, destino:'FINAL' },
-      { texto: 'Refugiarse en la estacion de servicio', requiere:{recursos:1}, efectos:{recursos:-1, moral:+5}, set:{salieronCamioneta:false}, bloqueadaTexto:'Sin recurso el refugio es mas costoso.', efectosAlternativos:{moral:-10}, destino:'FINAL' }
+      { texto: 'Refugiarse en la estacion de servicio', requiere:{recursos:1}, efectos:{recursos:-1, moral:+5}, set:{salieronCamioneta:false}, destino:'FINAL' }
     ]
   }
 };
