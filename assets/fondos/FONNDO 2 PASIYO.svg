@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1600 900" style="enable-background:new 0 0 1600 900;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0E1A1F;}
+	.st1{fill:#28393F;}
+	.st2{fill:#3C535B;}
+	.st3{fill:#131A1C;fill-opacity:0.15;}
+	.st4{fill:none;stroke:#131A1C;stroke-width:3;stroke-miterlimit:10;stroke-opacity:0.15;}
+	.st5{fill:#1F5A62;}
+	.st6{fill:none;stroke:#0E1A1F;stroke-width:4;stroke-miterlimit:10;}
+	.st7{fill:#C68E1F;}
+	.st8{fill:#9E1F1F;fill-opacity:0.28;}
+	.st9{fill:#9E1F1F;}
+	.st10{fill:#E9B23A;fill-opacity:0.28;}
+	.st11{fill:#E9B23A;}
+	.st12{fill:#8A4A2A;}
+	.st13{fill:#5E3420;}
+	.st14{fill:#131A1C;}
+</style>
+<g id="Capa_7">
+	<g id="capa_01_estructura_y_piso_1_" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+		<rect x="95.5" y="1.7" class="st0" width="1600" height="900"/>
+		<path class="st1" d="M95.5,541.7h1600V1.7H95.5V541.7z"/>
+		<path class="st2" d="M95.5,541.7h1600v-470H95.5V541.7z"/>
+		<path class="st3" d="M95.5,111.7h1600v-40H95.5V111.7z"/>
+		<path class="st0" d="M95.5,901.7h1600v-360H95.5V901.7z"/>
+		<path class="st1" d="M95.5,541.7h1600v60H95.5V541.7z"/>
+		<path class="st4" d="M115.5,541.7l-1800,360"/>
+		<path class="st4" d="M245.5,541.7l-1500,360"/>
+		<path class="st4" d="M375.5,541.7l-1200,360"/>
+		<path class="st4" d="M505.5,541.7l-900,360"/>
+		<path class="st4" d="M635.5,541.7l-600,360"/>
+		<path class="st4" d="M765.5,541.7l-300,360"/>
+		<path class="st4" d="M895.5,541.7v360"/>
+		<path class="st4" d="M1025.5,541.7l300,360"/>
+		<path class="st4" d="M1155.5,541.7l600,360"/>
+		<path class="st4" d="M1285.5,541.7l900,360"/>
+		<path class="st4" d="M1415.5,541.7l1200,360"/>
+		<path class="st4" d="M1545.5,541.7l1500,360"/>
+		<path class="st4" d="M1675.5,541.7l1800,360"/>
+	</g>
+</g>
+<g id="Capa_6">
+	
+		<g id="capa_02_puertas_1_" inkscape:groupmode="layer" inkscape:label="Puertas" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+		<path class="st5" d="M169.5,558.7h120v-340h-120V558.7z"/>
+		<path class="st6" d="M169.5,558.7h120v-340h-120V558.7z M169.5,388.7h120"/>
+		<path class="st7" d="M270.5,298.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S270.5,295.3,270.5,298.7z"/>
+		<path class="st7" d="M270.5,468.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S270.5,465.3,270.5,468.7z"/>
+		<path class="st5" d="M319.5,558.7h120v-340h-120V558.7z"/>
+		<path class="st6" d="M319.5,558.7h120v-340h-120V558.7z M319.5,388.7h120"/>
+		<path class="st7" d="M420.5,298.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S420.5,295.3,420.5,298.7z"/>
+		<path class="st7" d="M420.5,468.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S420.5,465.3,420.5,468.7z"/>
+		<path class="st5" d="M469.5,558.7h120v-340h-120V558.7z"/>
+		<path class="st6" d="M469.5,558.7h120v-340h-120V558.7z M469.5,388.7h120"/>
+		<path class="st7" d="M570.5,298.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S570.5,295.3,570.5,298.7z"/>
+		<path class="st7" d="M570.5,468.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S570.5,465.3,570.5,468.7z"/>
+		<path class="st5" d="M619.5,558.7h120v-340h-120V558.7z"/>
+		<path class="st6" d="M619.5,558.7h120v-340h-120V558.7z M619.5,388.7h120"/>
+		<path class="st7" d="M720.5,298.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S720.5,295.3,720.5,298.7z"/>
+		<path class="st7" d="M720.5,468.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S720.5,465.3,720.5,468.7z"/>
+		<path class="st5" d="M769.5,558.7h120v-340h-120V558.7z"/>
+		<path class="st6" d="M769.5,558.7h120v-340h-120V558.7z M769.5,388.7h120"/>
+		<path class="st7" d="M870.5,298.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S870.5,295.3,870.5,298.7z"/>
+		<path class="st7" d="M870.5,468.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S870.5,465.3,870.5,468.7z"/>
+		<path class="st5" d="M919.5,558.7h120v-340h-120V558.7z"/>
+		<path class="st6" d="M919.5,558.7h120v-340h-120V558.7z M919.5,388.7h120"/>
+		<path class="st7" d="M1020.5,298.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S1020.5,295.3,1020.5,298.7z"/>
+		<path class="st7" d="M1020.5,468.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S1020.5,465.3,1020.5,468.7z"/>
+		<path class="st5" d="M1069.5,558.7h120v-340h-120V558.7z"/>
+		<path class="st6" d="M1069.5,558.7h120v-340h-120V558.7z M1069.5,388.7h120"/>
+		<path class="st7" d="M1170.5,298.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S1170.5,295.3,1170.5,298.7z"/>
+		<path class="st7" d="M1170.5,468.7c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6S1170.5,465.3,1170.5,468.7z"/>
+	</g>
+</g>
+<g id="Capa_3">
+	
+		<g id="capa_05_luces_1_" inkscape:groupmode="layer" inkscape:label="Luces" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+		<path class="st8" d="M610,150.4c0,66.3-71.6,120-160,120s-160-53.7-160-120s71.6-120,160-120S610,84.1,610,150.4z"/>
+		<path class="st1" d="M390,102.4h120v-16H390V102.4z"/>
+		<path class="st9" d="M400,110.4h100v-10H400V110.4z"/>
+		<path class="st10" d="M1310,150.4c0,66.3-71.6,120-160,120s-160-53.7-160-120s71.6-120,160-120S1310,84.1,1310,150.4z"/>
+		<path class="st1" d="M1090,102.4h120v-16h-120V102.4z"/>
+		<path class="st11" d="M1100,110.4h100v-10h-100V110.4z"/>
+	</g>
+</g>
+<g id="Capa_5">
+	
+		<g id="capa_03_banco_1_" inkscape:groupmode="layer" inkscape:label="Banco" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+		<path class="st12" d="M550,619.4h500c5.5,0,10,4.5,10,10v40c0,5.5-4.5,10-10,10H550c-5.5,0-10-4.5-10-10v-40
+			C540,623.9,544.5,619.4,550,619.4z"/>
+		<path class="st13" d="M540,679.4h520v80H540V679.4z"/>
+	</g>
+</g>
+<g id="Capa_4">
+	
+		<g id="capa_04_extintor_1_" inkscape:groupmode="layer" inkscape:label="Extintor" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+		<path class="st9" d="M1386,569.4h26c7.7,0,14,6.3,14,14v122c0,7.7-6.3,14-14,14h-26c-7.7,0-14-6.3-14-14v-122
+			C1372,575.7,1378.3,569.4,1386,569.4z"/>
+		<path class="st14" d="M1390,579.4h18v-30h-18V579.4z"/>
+		<path class="st11" d="M1372,659.4h54v-20h-54V659.4z"/>
+	</g>
+</g>
+</svg>

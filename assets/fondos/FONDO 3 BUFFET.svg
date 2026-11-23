@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1600 900" style="enable-background:new 0 0 1600 900;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0E1A1F;}
+	.st1{fill:#9C9276;}
+	.st2{fill:#C7BCA0;}
+	.st3{fill:#131A1C;fill-opacity:0.15;}
+	.st4{fill:#28393F;}
+	.st5{fill:#3C535B;}
+	.st6{fill:none;stroke:#131A1C;stroke-width:3;stroke-miterlimit:10;stroke-opacity:0.15;}
+	.st7{fill:none;stroke:#0E1A1F;stroke-width:6;stroke-miterlimit:10;}
+	.st8{fill:#8A4A2A;}
+	.st9{fill:#1F5A62;}
+	.st10{fill:#5D7A82;}
+	.st11{fill:#8A6A3A;}
+	.st12{fill:#F4F1E9;}
+	.st13{fill:none;stroke:#9E1F1F;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st14{fill:#E9B23A;fill-opacity:0.28;}
+	.st15{fill:#E9B23A;}
+</style>
+<g id="Capa_12">
+	<g id="layer-background_1_">
+		<rect class="st0" width="1600" height="900"/>
+		<path class="st1" d="M0,540h1600V0H0V540z"/>
+		<path class="st2" d="M0,540h1600V70H0V540z"/>
+		<path class="st3" d="M0,110h1600V70H0V110z"/>
+		<path class="st4" d="M0,900h1600V540H0V900z"/>
+		<path class="st5" d="M0,540h1600v60H0V540z"/>
+	</g>
+</g>
+<g id="Capa_11">
+	<g id="layer-perspective_1_">
+		<path class="st6" d="M190.2,540l-1800,360"/>
+		<path class="st6" d="M320.2,540l-1500,360"/>
+		<path class="st6" d="M450.2,540l-1200,360"/>
+		<path class="st6" d="M580.2,540l-900,360"/>
+		<path class="st6" d="M710.2,540l-600,360"/>
+		<path class="st6" d="M840.2,540l-300,360"/>
+		<path class="st6" d="M970.2,540v360"/>
+		<path class="st6" d="M1100.2,540l300,360"/>
+		<path class="st6" d="M1230.2,540l600,360"/>
+		<path class="st6" d="M1360.2,540l900,360"/>
+		<path class="st6" d="M1490.2,540l1200,360"/>
+		<path class="st6" d="M1620.2,540l1500,360"/>
+		<path class="st6" d="M1750.2,540l1800,360"/>
+	</g>
+</g>
+<g id="Capa_9">
+	<g id="layer-shelf-left_1_">
+		<path class="st4" d="M190.2,503.4h280v-360h-280V503.4z"/>
+		<path class="st7" d="M190.2,213.4h280"/>
+		<path class="st7" d="M190.2,303.4h280"/>
+		<path class="st7" d="M190.2,393.4h280"/>
+		<path class="st8" d="M220.2,203.4h60v-40h-60V203.4z"/>
+		<path class="st9" d="M370.2,293.4h50v-40h-50V293.4z"/>
+	</g>
+</g>
+<g id="Capa_8">
+	<g id="layer-shelf-center_1_">
+		<path class="st4" d="M520,498.4h280v-360H520V498.4z"/>
+		<path class="st7" d="M520,208.4h280"/>
+		<path class="st7" d="M520,298.4h280"/>
+		<path class="st7" d="M520,388.4h280"/>
+		<path class="st8" d="M550,198.4h60v-40h-60V198.4z"/>
+		<path class="st9" d="M700,288.4h50v-40h-50V288.4z"/>
+	</g>
+</g>
+<g id="Capa_7">
+	<g id="layer-window_1_">
+		<path class="st10" d="M1123.8,523.4h320v-380h-320V523.4z"/>
+		<path class="st7" d="M1123.8,523.4h320v-380h-320V523.4z M1283.8,143.4v380"/>
+	</g>
+</g>
+<g id="Capa_6">
+	<g id="layer-counter_1_">
+		<path class="st11" d="M511.6,570h540c5.5,0,10,4.5,10,10v100c0,5.5-4.5,10-10,10h-540c-5.5,0-10-4.5-10-10V580
+			C501.6,574.5,506.1,570,511.6,570z"/>
+		<path class="st3" d="M501.6,690h560v-60h-560V690z"/>
+	</g>
+</g>
+<g id="Capa_5">
+	<g id="layer-sign_1_">
+		<path class="st12" d="M686,510h64c4.4,0,8,3.6,8,8v44c0,4.4-3.6,8-8,8h-64c-4.4,0-8-3.6-8-8v-44C678,513.6,681.6,510,686,510z"/>
+		<path class="st13" d="M718,522v36"/>
+		<path class="st13" d="M700,540h36"/>
+	</g>
+</g>
+<g id="Capa_4">
+	<g id="layer-seats_1_">
+		<path class="st8" d="M961.2,630h138c3.3,0,6,2.7,6,6v98c0,3.3-2.7,6-6,6h-138c-3.3,0-6-2.7-6-6v-98
+			C955.2,632.7,957.9,630,961.2,630z"/>
+		<path class="st8" d="M1131.2,670h108c3.3,0,6,2.7,6,6v78c0,3.3-2.7,6-6,6h-108c-3.3,0-6-2.7-6-6v-78
+			C1125.2,672.7,1127.9,670,1131.2,670z"/>
+	</g>
+</g>
+<g id="Capa_3">
+	<g id="layer-lamp_1_">
+		<path class="st14" d="M980,138.4c0,66.3-71.6,120-160,120s-160-53.7-160-120s71.6-120,160-120S980,72.1,980,138.4z"/>
+		<path class="st4" d="M760,90.4h120v-16H760V90.4z"/>
+		<path class="st15" d="M770,98.4h100v-10H770V98.4z"/>
+	</g>
+</g>
+</svg>
