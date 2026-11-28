@@ -1,15 +1,16 @@
 {
-  "total": 181,
+  "total": 237,
   "finales": {
-    "A": 9,
-    "B": 55,
-    "C": 117,
+    "A": 11,
+    "B": 71,
+    "C": 155,
     "GO": 0
   },
   "cortos": {
     "A": [
-      "N1#2",
-      "PATIO#2",
+      "N1#1",
+      "BUFFET#0",
+      "GALERIA#0",
       "OFICINA#0",
       "ESTACIONAMIENTO#0",
       "CAMIONETA#0"
