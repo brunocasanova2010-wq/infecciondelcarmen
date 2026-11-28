@@ -15,7 +15,7 @@ const REGLAS = {
 
   /* Estado con el que arranca toda partida. */
   inicial: { salud: 100, moral: 50, recursos: 1, llaves: false,
-             perroAliado: false, tomasRescatado: false, radioReparada: false, salieronCamioneta: false },
+             perro: true, perroAliado: true, tomasRescatado: false, radioReparada: false, salieronCamioneta: false },
 
   /* Si la Moral toca 0, se descuenta esta Salud UNA sola vez por partida. */
   penalizacionMoral0: 20,
