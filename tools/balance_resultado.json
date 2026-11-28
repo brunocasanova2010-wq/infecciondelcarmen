@@ -1,0 +1,33 @@
+{
+  "total": 181,
+  "finales": {
+    "A": 9,
+    "B": 55,
+    "C": 117,
+    "GO": 0
+  },
+  "cortos": {
+    "A": [
+      "N1#2",
+      "PATIO#2",
+      "OFICINA#0",
+      "ESTACIONAMIENTO#0",
+      "CAMIONETA#0"
+    ],
+    "B": [
+      "N1#0",
+      "PASILLO#1",
+      "GIMNASIO#0",
+      "ESTACIONAMIENTO#1",
+      "CALLE#0",
+      "REFUGIO#0"
+    ],
+    "C": [
+      "N1#0",
+      "PASILLO#1",
+      "GIMNASIO#0",
+      "ESTACIONAMIENTO#1",
+      "CALLE#1"
+    ]
+  }
+}
