@@ -35,7 +35,7 @@ const ESCENAS = {
     fondo: "Fondo_01_Aula.svg",
     personaje: "Personaje_Mateo.svg",
     animacion: "Animacion_Mateo.gif",
-    texto: "Suena la chicharra y esta vez nadie se ríe: en el patio hay gente corriendo en círculos y una maestra golpeando la puerta de Dirección. Mateo cuenta cabezas. Faltan Tomás, que estaba en el laboratorio, y Rocco, que se escapó al patio. Hay un minuto, una herramienta y tres salidas.",
+    texto: "Suena la chicharra y esta vez nadie se ríe: en el patio hay gente corriendo en círculos y una maestra golpeando la puerta de Dirección. Mateo cuenta cabezas. Falta Tomás, que estaba en el laboratorio. Rocco, el perro del colegio, no se le despega de la pierna: le eriza el lomo y gruñe hacia la puerta. Hay un minuto, una herramienta y tres salidas.",
     opciones: [
       {
         texto: "Atrancar la puerta con una silla y salir por el pasillo norte",
@@ -48,7 +48,7 @@ const ESCENAS = {
         efectos: { salud: -5 }
       },
       {
-        texto: "Saltar por la ventana al patio y buscar a Rocco",
+        texto: "Saltar por la ventana al patio, con Rocco adelante",
         destino: "PATIO",
         efectos: { salud: -5, moral: 5 }
       }
@@ -106,28 +106,26 @@ const ESCENAS = {
   /* ---------------- 4. PATIO (nodo de Rocco) ---------------- */
   "PATIO": {
     etapa: 2,
-    titulo: "Patio · El perro bajo la reja",
-    fondo: "Patio_Reja.svg",
+    titulo: "Patio · Rocco se planta",
+    fondo: "Patio.svg",
     personaje: "Personaje_Rocco.svg",
-    texto: "Bajo la reja caída hay un perro atrapado: es Rocco, el perro del colegio. Tiene el pelaje sucio y una chapa que dice «3° B». Gime, pero no muerde. Del otro lado de la galería se escuchan pasos arrastrados: si no deciden ahora, la reja va a ser su único camino.",
+    texto: "La reja del patio está vencida y el portón de chapa, arrancado de un gozne. Del otro lado del hueco hay una silueta quieta, meciéndose. Rocco se le planta adelante al grupo, con las patas abiertas y el pelo del lomo parado: no ladra, gruñe. Si lo sueltan, gana tiempo. Si lo llaman, los guía por el hueco del fondo.",
     opciones: [
       {
-        texto: "Levantar la reja con la herramienta y liberarlo",
+        texto: "Soltar a Rocco para que lo distraiga y cruzar",
         destino: "GALERIA",
-        requiere: { recursos: 1 },
-        efectos: { recursos: -1, moral: 20, salud: -5 },
-        set: { perro: true, perroAliado: true }
+        efectos: { salud: -10, moral: -5 }
       },
       {
-        texto: "Dejarle agua en el plato y seguir sin abrir",
-        destino: "GALERIA",
-        efectos: { moral: -10, salud: -5 }
-      },
-      {
-        texto: "Silbar para que los siga por el hueco del fondo",
+        texto: "Levantar la reja caída entre los dos y pasar juntos",
         destino: "OFICINA",
-        efectos: { moral: 5, salud: -10 },
-        set: { perro: true, perroAliado: true }
+        requiere: { recursos: 1 },
+        efectos: { recursos: -1, moral: 15, salud: -5 }
+      },
+      {
+        texto: "Volver por el buffet y rodear el patio",
+        destino: "GALERIA",
+        efectos: { salud: -5, moral: -10 }
       }
     ]
   },
@@ -156,7 +154,7 @@ const ESCENAS = {
       {
         texto: "Golpear el vidrio para que salga solo",
         destino: "GALERIA",
-        efectos: { salud: -15, moral: 10 },
+        efectos: { salud: -25, moral: 10 },
         set: { tomasRescatado: true }
       }
     ]
@@ -173,7 +171,7 @@ const ESCENAS = {
       {
         texto: "Cruzar el gimnasio y abrir la puerta de servicio",
         destino: "ESTACIONAMIENTO",
-        efectos: { salud: -10, moral: 5 }
+        efectos: { salud: -20, moral: 5 }
       },
       {
         texto: "Volver por la galería: más lejos, pero más seguro",
@@ -294,7 +292,7 @@ const ESCENAS = {
       {
         texto: "Rodear por el descampado y seguir a pie",
         destino: "FINAL",
-        efectos: { salud: -15, moral: -10 },
+        efectos: { salud: -25, moral: -10 },
         set: { salida: "pie" }
       }
     ]
