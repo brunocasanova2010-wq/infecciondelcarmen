@@ -22,7 +22,10 @@ let historial = []; // registro de decisiones para la pantalla de pruebas
 function reiniciarEstado() {
   estado = Object.assign({}, ESTADO_INICIAL);
   estado.salida = '';
-  estado.perro = false;
+  /* Rocco arranca con el grupo: es el perro del colegio y sigue a Mateo
+     desde que suena la alarma. No se "encuentra" en ningun lugar. */
+  estado.perro = ESTADO_INICIAL.perro;
+  estado.perroAliado = ESTADO_INICIAL.perroAliado;
   estado.penalizacionMoral = false; // la penalizacion todavia no ocurrio
   historial = [];
 }
@@ -34,7 +37,12 @@ function limitar(valor, min, max) {
 /* Aplica los efectos de una opcion al estado y los recorta a su rango. */
 function aplicarEfectos(efectos, sets) {
   if (efectos) {
-    if (typeof efectos.salud === 'number')    estado.salud    = limitar(estado.salud + efectos.salud, 0, 100);
+    if (typeof efectos.salud === 'number') {
+      /* Rocco es el guardian del grupo: si va con Mateo, todo golpe duele 5 menos. */
+      let dano = efectos.salud;
+      if (dano < 0 && estado.perro) dano = Math.min(-1, dano + 5);
+      estado.salud = limitar(estado.salud + dano, 0, 100);
+    }
     if (typeof efectos.moral === 'number')    estado.moral    = limitar(estado.moral + efectos.moral, 0, 100);
     if (typeof efectos.recursos === 'number') estado.recursos = limitar(estado.recursos + efectos.recursos, 0, 5);
   }
